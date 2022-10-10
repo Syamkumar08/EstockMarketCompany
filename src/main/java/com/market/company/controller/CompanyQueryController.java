@@ -8,6 +8,7 @@ import org.axonframework.queryhandling.QueryGateway;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,6 +33,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
  */
 @RestController
 @RequestMapping(value = "/api/v1.0/market/company/")
+@CrossOrigin(origins = "http://localhost:4200/")
 @Tag(name = "Company Query", description = "This is a controller for query operations on Company Resource")
 public class CompanyQueryController {
 
